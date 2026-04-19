@@ -47,9 +47,9 @@ export default function GamingPage() {
               </div>
             </div>
 
-            <div className="relative isolate">
+            <div className="relative isolate group/gamepad">
               {/* Decorative Gamepad Image */}
-              <div className="absolute -bottom-16 -right-16 z-20 hidden lg:block">
+              <div className="absolute -bottom-16 -right-16 z-20 hidden lg:block transition-transform duration-700 ease-in-out group-hover/gamepad:-translate-x-96 group-hover/gamepad:rotate-[-8deg]">
                 <div className="relative h-[300px] w-[300px]">
                   <Image
                     src="/gamepad.png"
