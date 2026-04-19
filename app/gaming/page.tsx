@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Gamepad2, MonitorPlay, MoveRight, Trophy, Wifi } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
@@ -26,10 +27,10 @@ export default function GamingPage() {
     <main className="page-shell">
       <section className="section-space">
         <div className="container-shell">
-          <div className="grid gap-6 lg:grid-cols-[1.02fr_0.98fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="max-w-3xl">
               <span className="section-tag">Gaming lounge</span>
-              <h1 className="mt-5 font-display text-[clamp(3rem,7vw,6rem)] font-semibold leading-[0.95] text-[var(--text)]">
+              <h1 className="mt-5 font-display text-[clamp(3rem,7.5vw,5.6rem)] font-semibold leading-[0.95] tracking-tight text-[var(--text)]">
                 Big-screen sessions that fit both quick drop-ins and long hangs.
               </h1>
               <p className="mt-6 text-lg leading-8 text-[var(--muted)]">
@@ -46,37 +47,52 @@ export default function GamingPage() {
               </div>
             </div>
 
-            <div className="dark-panel rounded-[36px] p-6 text-white sm:p-8">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white/40">
-                    Recommended entry point
-                  </div>
-                  <h2 className="mt-3 font-display text-4xl font-semibold text-white">
-                    Start with the two-hour standard session.
-                  </h2>
+            <div className="relative isolate">
+              {/* Decorative Gamepad Image */}
+              <div className="absolute -bottom-16 -right-16 z-20 hidden lg:block">
+                <div className="relative h-[300px] w-[300px]">
+                  <Image
+                    src="/gamepad.png"
+                    alt="Gaming Controller"
+                    fill
+                    className="animate-float object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                    priority
+                  />
                 </div>
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/8 text-[var(--accent)]">
-                  <Trophy className="h-5 w-5" />
-                </span>
               </div>
-              <p className="mt-4 text-base leading-8 text-white/68">
-                It gives you enough time to settle in, switch games, and enjoy the room without committing to a half day on your first visit.
-              </p>
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {loungeHighlights.map((item) => {
-                  const Icon = item.icon;
 
-                  return (
-                    <div key={item.title} className="rounded-[24px] border border-white/10 bg-white/6 p-4">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/8 text-[var(--accent)]">
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <h3 className="mt-4 text-sm font-semibold text-white">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-7 text-white/62">{item.description}</p>
+              <div className="dark-panel relative z-10 rounded-[40px] p-6 text-white sm:p-8 lg:p-10">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white/44">
+                      Recommended entry point
                     </div>
-                  );
-                })}
+                    <h2 className="mt-3 font-display text-4xl font-semibold text-white">
+                      Start with the two-hour standard session.
+                    </h2>
+                  </div>
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/8 text-[var(--accent)]">
+                    <Trophy className="h-5 w-5" />
+                  </span>
+                </div>
+                <p className="mt-4 text-base leading-8 text-white/68">
+                  It gives you enough time to settle in, switch games, and enjoy the room without committing to a half day on your first visit.
+                </p>
+                <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                  {loungeHighlights.map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <div key={item.title} className="rounded-[24px] border border-white/10 bg-white/6 p-4">
+                        <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/8 text-[var(--accent)]">
+                          <Icon className="h-4 w-4" />
+                        </span>
+                        <h3 className="mt-4 text-sm font-semibold text-white">{item.title}</h3>
+                        <p className="mt-2 text-sm leading-7 text-white/62">{item.description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

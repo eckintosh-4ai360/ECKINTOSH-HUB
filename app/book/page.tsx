@@ -177,7 +177,7 @@ export default function BookPage() {
               </div>
             </div>
 
-            <div className="dark-panel rounded-[36px] p-6 text-white sm:p-8">
+            <div className="dark-panel h-fit rounded-[36px] p-6 text-white sm:p-8 lg:sticky lg:top-28">
               {submitted ? (
                 <div className="flex h-full flex-col justify-center">
                   <span className="section-tag border-white/10 bg-white/6 text-white/80">
