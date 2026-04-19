@@ -1,0 +1,20 @@
+
+> the-hub@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.25.80.1:3000
+✓ Ready in 668ms
+Creating turbopack project {
+  dir: 'C:\\Users\\ECKINTOSH\\Desktop\\NEXT PROJECTS\\the-hub',
+  testMode: true
+}
+
+ GET / 200 in 2.9s (next.js: 2.3s, application-code: 596ms)
+ GET / 200 in 152ms (next.js: 4ms, application-code: 148ms)
+ GET / 200 in 143ms (next.js: 3ms, application-code: 140ms)
+ GET / 200 in 183ms (next.js: 4ms, application-code: 179ms)
+ GET /gaming 200 in 824ms (next.js: 775ms, application-code: 49ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://C:/Users/ECKINTOSH/Desktop/NEXT PROJECTS/the-hub/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+ GET /book 200 in 652ms (next.js: 624ms, application-code: 28ms)
